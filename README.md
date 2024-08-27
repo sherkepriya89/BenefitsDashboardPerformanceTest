@@ -5,11 +5,11 @@ This project contains a simple performance test created using Apache JMeter for 
 
 ## Test Details
 - **Tool Used**: Apache JMeter
-- **Number of Threads (Users)**: 10
-- **Ramp-Up Period**: 1 second
-- **Thread Lifetime**: 60 seconds
+- **Number of Threads (Users)**: 20
+- **Ramp-Up Period**: 2 second
+- **Thread Lifetime**: 120 seconds
 - **Constant Timer**: 1000 milliseconds (1 second)
-- **Test Duration**: 60 seconds
+- **Test Duration**: 120 seconds
 
 ### API Endpoints Tested
 1. **GetEmployees**: Retrieves a list of employees.
