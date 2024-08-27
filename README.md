@@ -30,3 +30,6 @@ This project contains a simple performance test created using Apache JMeter for 
 ## Submission
 Please find the test plan and test results [View the Report](https://github.com/sherkepriya89/BenefitsDashboardPerformanceTest/blob/main/TestResults/report/index.html)
 ---
+![](Statistics.png)
+
+![](ResponseTime.png)
