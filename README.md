@@ -28,5 +28,5 @@ This project contains a simple performance test created using Apache JMeter for 
 3. **View Results**: Use the provided listeners in the JMX file to view and analyze the results.
 
 ## Submission
-Please find the test plan and test results [View the Report](https://github.com/sherkepriya89/BenefitsDashboardPerformanceTest/blob/main/TestResults/report/index.html)
+Please find the test plan and test results [View the Report](https://github.com/sherkepriya89/BenefitsDashboardPerformanceTest/blob/main/index.html)
 ---
