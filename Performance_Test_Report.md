@@ -1,55 +1,51 @@
-## Test Report
+# Test Report
 
-The test involved a total of 2140 requests across four API endpoints. The test results show the following average response times:
+The test involved a total of 2141 requests across four API endpoints. The test results show the following average response times:
 
-- **GetEmployees:** 184 ms
-- **AddEmployee:** 77 ms
-- **EditEmployee:** 80 ms
-- **DeleteEmployee:** 74 ms
+- **GetEmployees**: 185 ms
+- **AddEmployee**: 73 ms
+- **EditEmployee**: 78 ms
+- **DeleteEmployee**: 72 ms
 
-### Key Metrics
+## Key Metrics
 
 | Endpoint        | # Samples | Avg. Response Time (ms) | Min (ms) | Max (ms) | Std. Dev. (ms) | Throughput (req/sec) |
 |-----------------|-----------|-------------------------|----------|----------|----------------|----------------------|
-| GetEmployees    | 540       | 184                     | 140      | 705      | 37.97          | 4.59149              |
-| AddEmployee     | 540       | 77                      | 54       | 249      | 18.52          | 4.60221              |
-| EditEmployee    | 537       | 80                      | 62       | 286      | 15.15          | 4.60648              |
-| DeleteEmployee  | 523       | 74                      | 50       | 328      | 18.14          | 4.52869              |
-| **TOTAL**       | **2140**  | **104**                 | **50**   | **705**  | **52.47**      | **17.97791**         |
+| GetEmployees    | 540       | 185                     | 146      | 489      | 35.60          | 4.60743              |
+| AddEmployee     | 540       | 73                      | 50       | 170      | 11.66          | 4.61684              |
+| EditEmployee    | 535       | 78                      | 60       | 342      | 16.00          | 4.58920              |
+| DeleteEmployee  | 526       | 72                      | 48       | 179      | 12.85          | 4.55104              |
+| **TOTAL**       | **2141**  | **102**                 | **48**   | **489**  | **52.52**      | **17.98268**         |
 
-### Analysis
-
-- The **GetEmployees** endpoint had the highest average response time at 184 ms, indicating it might be more resource-intensive than the other endpoints.
-- The **DeleteEmployee** endpoint had the lowest average response time at 74 ms.
-- Throughput for each endpoint was around 4.5 requests per second, with the total throughput being 17.98 requests per second.
+## Analysis
 
 1. **GetEmployees Endpoint**:
-   - The average response time for this endpoint is 184 ms, with a standard deviation of 37.97 ms. While the average is reasonable, the variation indicates occasional delays, which could affect user experience.
-   - The maximum response time reached 705 ms, which is higher than the other endpoints, suggesting potential bottlenecks or resource-intensive operations when retrieving employee data.
+   - The average response time for this endpoint is 185 ms, with a standard deviation of 35.60 ms. Although the average response time is reasonable, the variation indicates occasional delays that could impact user experience.
+   - The maximum response time reached 489 ms, suggesting that while it performs better than previously, some requests may still experience delays, potentially due to resource-intensive operations.
 
 2. **AddEmployee Endpoint**:
-   - This endpoint demonstrated strong performance with an average response time of 77 ms. The throughput was 4.60 requests per second, which indicates consistent and reliable processing of employee additions.
-   - The lower standard deviation of 18.52 ms reflects stable performance with minimal variability in response times.
+   - This endpoint demonstrated strong performance with an average response time of 73 ms. The throughput was 4.62 requests per second, indicating consistent and reliable processing of employee additions.
+   - The lower standard deviation of 11.66 ms reflects stable performance with minimal variability in response times.
 
 3. **EditEmployee Endpoint**:
-   - The performance of the EditEmployee endpoint was slightly slower than the AddEmployee endpoint, with an average response time of 80 ms. Throughput was comparable at 4.61 requests per second.
-   - The standard deviation of 15.15 ms shows that the response times were generally consistent, indicating good reliability in processing edits.
+   - The performance of the EditEmployee endpoint was slightly slower than the AddEmployee endpoint, with an average response time of 78 ms. Throughput was comparable at 4.59 requests per second.
+   - The standard deviation of 16.00 ms shows that the response times were generally consistent, indicating good reliability in processing edits.
 
 4. **DeleteEmployee Endpoint**:
-   - The DeleteEmployee endpoint had the best performance among all endpoints, with an average response time of 74 ms and a throughput of 4.53 requests per second.
-   - The standard deviation was 18.14 ms, which is slightly higher but still within an acceptable range, showing that delete operations are handled efficiently.
+   - The DeleteEmployee endpoint had the best performance among all endpoints, with an average response time of 72 ms and a throughput of 4.55 requests per second.
+   - The standard deviation was 12.85 ms, showing that delete operations are handled efficiently and consistently.
 
 5. **Overall Performance**:
-   - Across all endpoints, the overall average response time was 104 ms, with a total throughput of 17.98 requests per second.
-   - The GetEmployees endpoint shows higher response times compared to others, indicating it might benefit from further optimization to match the performance of the other endpoints.
+   - Across all endpoints, the overall average response time was 102 ms, with a total throughput of 17.98 requests per second.
+   - The GetEmployees endpoint shows higher response times compared to others, indicating it might still benefit from further optimization to match the performance of the other endpoints.
 
-### Recommendations
+## Recommendations
 
-- **GetEmployees Endpoint**: Given the relatively high response time and variability, it's recommended to investigate the underlying causes, possibly focusing on optimizing database queries, caching strategies, or server-side processing to reduce delays.
-- **Performance Optimization**: While the current performance is strong, particularly for AddEmployee, EditEmployee, and DeleteEmployee endpoints, continued monitoring and optimization could help maintain and potentially improve these metrics as the application scales.
+- **GetEmployees Endpoint**: Given the relatively high response time and variability, it's recommended to continue investigating the underlying causes, possibly focusing on optimizing database queries, caching strategies, or server-side processing to reduce delays further.
+- **Performance Optimization**: The current performance is strong, particularly for AddEmployee, EditEmployee, and DeleteEmployee endpoints. Continued monitoring and optimization could help maintain and potentially improve these metrics as the application scales.
 - **Scalability Testing**: Consider conducting load testing with more users to assess the system's scalability and identify any potential performance degradation under heavier load conditions.
 
-### Conclusion
+## Conclusion
 
 The performance test results indicate that the Benefits Dashboard API can handle moderate traffic with good response times. The results suggest that the application performs well under the tested conditions.
 
